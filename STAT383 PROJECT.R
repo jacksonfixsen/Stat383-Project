@@ -56,7 +56,7 @@ cat("Rejection Region: (-", infinity, ",", -z_critical,"]U[", z_critical,",",inf
 
 
 # Rejection decision
-reject_null <- abs(TS) < z_critical
+reject_null <- abs(TS) > z_critical
 
 #Print decision
 cat("Reject Null Hypothesis: ", reject_null, "\n")
