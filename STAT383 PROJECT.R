@@ -46,11 +46,13 @@ se <- sqrt(p0 * (1 - p0) / n_males)
 # Critical z-value for two-tailed test
 z_critical <- qnorm(1 - alpha / 2)
 
-# Compute the p-value (two-tailed test)
-p_value <- 2 * (1 - pnorm(abs(TS)))
+
 
 # Compute the test statistic (z-score)
 TS <- (p_hat - p0) / se
+
+# Compute the p-value (two-tailed test)
+p_value <- 2 * (1 - pnorm(abs(TS)))
 
 infinity <- "\u221e"
 
